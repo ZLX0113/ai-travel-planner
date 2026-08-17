@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+backend/lib/
+backend/venv/
+lib/
+
+# 环境变量
+.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Tools
+ngrok.exe
+ngrok.zip
+cloudflared.exe
+ai-travel-planner.zip
+
+# OS
+.DS_Store
+Thumbs.db
