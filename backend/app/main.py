@@ -1,7 +1,12 @@
 """AI 旅行规划师 — FastAPI 入口"""
 
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'lib'))
+
+# On Vercel, packages are installed via pip (not bundled lib/)
+if not os.environ.get('VERCEL'):
+    lib_path = os.path.join(os.path.dirname(__file__), '..', 'lib')
+    if os.path.isdir(lib_path):
+        sys.path.insert(0, lib_path)
 
 from dotenv import load_dotenv
 load_dotenv()

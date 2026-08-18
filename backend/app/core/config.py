@@ -20,7 +20,12 @@ class AppConfig:
     """应用全局配置"""
     host: str = os.getenv("HOST", "0.0.0.0")
     port: int = int(os.getenv("PORT", "8000"))
-    cors_origins: list[str] = field(default_factory=lambda: ["http://localhost:5173", "http://localhost:3000"])
+    cors_origins: list[str] = field(default_factory=lambda: [
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://ai-travel-planner-nbyx.vercel.app",
+        "https://ai-travel-planner.vercel.app",
+    ])
     llm: LLMConfig = field(default_factory=LLMConfig)
 
 
