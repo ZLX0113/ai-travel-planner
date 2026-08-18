@@ -1,4 +1,4 @@
-import { type Message } from '../App'
+import { type Message } from '../types'
 import ReactMarkdown from 'react-markdown'
 import VersionTabs from './VersionTabs'
 import TripMap from './TripMap'

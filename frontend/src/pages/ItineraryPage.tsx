@@ -101,11 +101,11 @@ export default function ItineraryPage() {
     // 移除 sticky 元素避免 PDF 中重复
     element.querySelectorAll('.sticky').forEach(el => (el as HTMLElement).style.position = 'static')
     const opt = {
-      margin: [10, 10, 10, 10],
+      margin: 10,
       filename: `${itinerary?.destination || '行程'}_${new Date().toISOString().slice(0, 10)}.pdf`,
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' as const },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
     }
     html2pdf().set(opt).from(element).save()
   }

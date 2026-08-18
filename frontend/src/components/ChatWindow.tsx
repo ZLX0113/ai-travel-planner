@@ -1,4 +1,4 @@
-import { type Message } from '../App'
+import { type Message } from '../types'
 import MessageBubble from './MessageBubble'
 
 interface ChatWindowProps {
